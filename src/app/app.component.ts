@@ -17,9 +17,14 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
+      title: 'Usuarios',
       url: '/list',
       icon: 'list'
+    },
+    {
+      title: 'Agregar Usuario',
+      url: '/agregar',
+      icon: 'walk'
     }
   ];
 

@@ -1,5 +1,7 @@
 {
   "name": "provedores",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

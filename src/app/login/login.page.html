@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form [formGroup]="myForm" (ngSubmit)="saveData()" >
+    <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <!--<ion-input [(ngModel)]="usuario" ></ion-input>-->
+          <ion-input formControlName="usuario" ></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label position="floating" color="tertiary">Password</ion-label>
+         <!-- <ion-input type="password" [(ngModel)]="password" color="tertiary" ></ion-input>-->
+          <ion-input type="password" formControlName="password"  color="tertiary"></ion-input>
+        </ion-item>
+        
+            <!--<ion-button color="primary" [routerLink]="['/home']" expand="full" color="tertiary" shape="round">Ingresar</ion-button>-->
+            <ion-button color="primary" expand="full" [disabled]="this.myForm.invalid" (click)="validar()" >Registrar</ion-button>
+
+            <ion-label color="danger">{{mensaje}}</ion-label>
+      </ion-card-content>
+</form>
+ 
+</ion-content> 

@@ -1,0 +1,29 @@
+<form [formGroup]="myForm" (ngSubmit)="saveData()">
+    <ion-list>
+        <ion-item>
+
+            <ion-input formControlName="nombre" type="text" placeholder="Nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+
+            <ion-input formControlName="ndocumento" type="number" placeholder="DUI"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="calendar" slot="end"></ion-icon>
+            <ion-datetime displayFormat="DDDD MMM D, YYYY" formControlName="fecha" placeholder="Seleccione una fecha"
+             max="2019" value="2008-09-02"></ion-datetime>
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <!-- <ion-item>
+            <ion-input formControlName="idempleado" type="text" placeholder="Nombre del empleado al que visita">
+            </ion-input>
+        </ion-item> -->
+        <p>
+            <ion-button color="primary" (click)="presentLoading()" expand="full" [disabled]="this.myForm.invalid">Registrar
+            </ion-button>
+        </p>
+    </ion-list>
+</form>

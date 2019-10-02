@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuController } from '@ionic/angular'; //para controlar el menu
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public menu: MenuController) {}
 
+  
+  ionViewWillEnter(){
+    this.menu.enable(true);
+  }
 }
+
+
